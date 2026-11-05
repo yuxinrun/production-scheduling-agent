@@ -69,9 +69,9 @@ const sidebar = [
       { text: '客户明码标价的 KPI', link: '/case/kpi' },
       { text: '68 条规则与 137 条约束', link: '/case/rules' },
       { text: '数据四区间与五维门禁', link: '/case/data' },
-      { text: '14 个智能体逐个拆', link: '/case/agents' },
+      { text: '16 个编号逐个拆', link: '/case/agents' },
       { text: '七大扰动的处置流程', link: '/case/disturbance' },
-      { text: '难度、准确率与形态四档', link: '/case/verdict' },
+      { text: '判定链七环：难度 → 形态', link: '/case/verdict' },
       { text: '投产配置清单：还差什么', link: '/case/checklist' }
     ]
   },

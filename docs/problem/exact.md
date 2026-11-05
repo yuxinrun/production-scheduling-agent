@@ -177,7 +177,7 @@ CP-SAT（Google OR-Tools）在 2020 年代把「精确算法」这词重新定�
 1. **CDCL 式的冲突学习**（借鉴 SAT 求解器，Ohrimenko–Stückrath–Wunderlich 2009 把 lazy clause generation 与 MIP 结合）：
    搜索里失败一次，就把「为什么失败」学成一条子句，永久剪掉同类分支。
    这是它和传统 CP 最大的差别——**传统 CP 不学习，CP-SAT 学**。
-2. ** portfolios / 多 worker**：`num_search_workers=8` 起，8 个线程跑不同的搜索策略与不同的随机种子，
+2. **portfolios / 多 worker**：`num_search_workers=8` 起，8 个线程跑不同的搜索策略与不同的随机种子，
    谁先出界谁更新。排产实例的方差极大，portfolio 是稳赚的设计。
 3. **内建 LNS**（Large Neighborhood Search）：拿到可行解后，随机冻结一部分、重解剩下的。
    每个改进都会更新上界 → 剪枝更狠。**这让它同时是精确算法和元启发式**。

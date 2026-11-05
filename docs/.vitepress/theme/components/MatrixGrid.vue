@@ -7,9 +7,22 @@ withDefaults(
     glow?: string
     cols: string[]
     rows: { label: string; sub?: string; cells: { s: string; t?: string }[] }[]
+    corner?: string
+    legend?: { s: string; label: string }[]
     note?: string
   }>(),
-  { rows: () => [], cols: () => [] }
+  {
+    rows: () => [],
+    cols: () => [],
+    corner: '约束 ＼ 场景',
+    legend: () => [
+      { s: 'ok', label: '满足 / 硬适用' },
+      { s: 'soft', label: '软约束（可违反，计入惩罚）' },
+      { s: 'warn', label: '预警' },
+      { s: 'block', label: '阻断' },
+      { s: 'na', label: '无关' }
+    ]
+  }
 )
 
 const marks: Record<string, string> = {
@@ -25,7 +38,7 @@ const marks: Record<string, string> = {
 
     <div class="mg-scroll">
       <div class="mg" :style="{ gridTemplateColumns: `minmax(140px, 1.3fr) repeat(${cols.length}, minmax(52px, 1fr))` }">
-        <div class="mg-cell mg-th mg-corner">约束 ＼ 场景</div>
+        <div class="mg-cell mg-th mg-corner">{{ corner }}</div>
         <div v-for="c in cols" :key="c" class="mg-cell mg-th">{{ c }}</div>
 
         <template v-for="(r, ri) in rows" :key="r.label">
@@ -48,11 +61,7 @@ const marks: Record<string, string> = {
     </div>
 
     <div class="mg-legend">
-      <span><i class="mgk-ok" />满足 / 硬适用</span>
-      <span><i class="mgk-soft" />软约束（可违反，计入惩罚）</span>
-      <span><i class="mgk-warn" />预警</span>
-      <span><i class="mgk-block" />阻断</span>
-      <span><i class="mgk-na" />无关</span>
+      <span v-for="l in legend" :key="l.label"><i :class="'mgk-' + l.s" />{{ l.label }}</span>
     </div>
 
     <p v-if="note" class="psa-note">{{ note }}</p>
@@ -93,6 +102,7 @@ const marks: Record<string, string> = {
   font-family: var(--font-mono); font-size: 9.5px; color: var(--muted);
 }
 .mg-legend i { width: 9px; height: 9px; border-radius: 3px; background: var(--k); }
-.mgk-ok { --k: var(--accent); } .mgk-soft { --k: var(--blue); }
+.mgk-ok { --k: var(--accent); } .mgk-hard { --k: var(--accent); } .mgk-soft { --k: var(--blue); }
+.mgk-weak { --k: var(--faint); } .mgk-missing { --k: var(--coral); }
 .mgk-warn { --k: #b7791f; } .mgk-block { --k: var(--coral); } .mgk-na { --k: var(--line-strong); }
 </style>

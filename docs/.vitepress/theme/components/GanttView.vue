@@ -10,6 +10,7 @@ withDefaults(
     glow?: string
     rows: { name: string; sub?: string; bars: { s: number; d: number; tone?: string; label?: string; ghost?: boolean }[] }[]
     legend?: { tone: string; label: string }[]
+    ghostLabel?: string
     note?: string
     nowAt?: number
   }>(),
@@ -18,7 +19,7 @@ withDefaults(
     { tone: 'coral', label: '冲突 / 违规' },
     { tone: 'blue', label: '等待与缓冲' },
     { tone: 'lime', label: '瓶颈资源' }
-  ] }
+  ], ghostLabel: '虚线 = 被产能挤掉的部分' }
 )
 
 const ticks = (props: number, horizon: number) => Array.from({ length: Math.floor(horizon / props) + 1 }, (_, i) => i)
@@ -31,7 +32,7 @@ const ticks = (props: number, horizon: number) => Array.from({ length: Math.floo
     <p v-if="lead" class="psa-lead">{{ lead }}</p>
     <div class="psa-legend">
       <span v-for="l in legend" :key="l.label"><i :class="'sw-' + l.tone" />{{ l.label }}</span>
-      <span><i class="sw-ghost" />虚线 = 被产能挤掉的部分</span>
+      <span><i class="sw-ghost" />{{ ghostLabel }}</span>
     </div>
 
     <div class="gv">
@@ -39,7 +40,7 @@ const ticks = (props: number, horizon: number) => Array.from({ length: Math.floo
         <span class="gv-corner">资源 / 工序</span>
         <div class="gv-axis">
           <span v-for="i in ticks(tick, horizon)" :key="i" class="gv-tick" :style="{ left: (i * tick / horizon) * 100 + '%' }">
-            {{ tickUnit }}{{ i }}
+            {{ tickUnit }}{{ i * tick }}
           </span>
         </div>
       </div>

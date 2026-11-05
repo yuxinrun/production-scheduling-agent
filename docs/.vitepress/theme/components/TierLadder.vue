@@ -86,6 +86,7 @@ withDefaults(
 .tl-coral { --fill: var(--coral); --soft: var(--coral-soft); }
 .tl-blue { --fill: var(--blue); --soft: var(--blue-soft); }
 .tl-lime { --fill: var(--lime); --soft: rgba(169, 204, 63, .18); }
+.tl-ink { --fill: var(--ink-2); --soft: var(--panel-3); }
 
 @media (max-width: 960px) { .tl { grid-template-columns: repeat(2, minmax(0, 1fr)); } .tl-card { margin-top: 0 !important; } }
 @media (max-width: 620px) { .tl { grid-template-columns: 1fr; } }
