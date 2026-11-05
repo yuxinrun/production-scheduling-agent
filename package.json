@@ -1,0 +1,19 @@
+{
+  "name": "production-scheduling-agent-handbook",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "排产 Agent 手册 — 写给要做 production-scheduling-agent 的程序员",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "dependencies": {
+    "@fontsource-variable/jetbrains-mono": "^5.3.0",
+    "@fontsource-variable/manrope": "^5.3.0"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}

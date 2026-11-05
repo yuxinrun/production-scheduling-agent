@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 546 363" width="546" height="363" role="img" aria-label="戴着安全帽和调度耳麦的青色小鱼，正把一块甘特条挪到正确的时间轨道上">
+  <g>
+    <!-- 甘特看板（虚线网格 + 三条排程条） -->
+    <rect x="300" y="46" width="226" height="176" rx="14" fill="none" stroke="#0a958a" stroke-opacity=".35" stroke-dasharray="7 6"/>
+    <path d="M318 84h190M318 122h190M318 160h190" stroke="#0a958a" stroke-opacity=".16" stroke-dasharray="4 8"/>
+    <rect x="318" y="66" width="96" height="20" rx="10" fill="#0a958a" opacity=".85"/>
+    <rect x="386" y="104" width="118" height="20" rx="10" fill="#e85734" opacity=".85"/>
+    <rect x="342" y="142" width="72" height="20" rx="10" fill="#3568d4" opacity=".85"/>
+    <rect x="420" y="180" width="88" height="20" rx="10" fill="#a9cc3f" opacity=".9"/>
+    <!-- 挪动：把最后一块搬进时窗 -->
+    <path d="M404 190c-14-24-2-46 22-52" fill="none" stroke="#e85734" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 7"/>
+    <path d="M426 138l8-6-1 12z" fill="#e85734"/>
+
+    <!-- 鱼身 -->
+    <path d="M236 186c0-52 46-92 106-92s106 40 106 92-46 92-106 92-106-40-106-92z" fill="#35d8c4"/>
+    <path d="M150 186l-64-58c14 30 14 86 0 116l64-58z" fill="#0a958a"/>
+    <path d="M262 104c16-26 42-30 58-14-16 6-32 14-40 26z" fill="#0a958a" opacity=".8"/>
+    <path d="M286 262c22 12 44 6 54-10-18 0-36-2-48-8z" fill="#0a958a" opacity=".6"/>
+    <!-- 肚皮 -->
+    <path d="M296 214c30 22 74 22 104 0-14 30-46 44-60 40-22 4-40-14-44-40z" fill="#eafaf5" opacity=".65"/>
+
+    <!-- 眼睛与嘴 -->
+    <circle cx="392" cy="164" r="17" fill="#f6f4ee"/>
+    <circle cx="396" cy="166" r="8" fill="#0e201c"/>
+    <path d="M420 202c10 10 24 8 30-4" fill="none" stroke="#0e201c" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- 安全帽 -->
+    <path d="M336 108c0-34 26-58 58-58s58 24 58 58z" fill="#e8b23a"/>
+    <rect x="322" y="102" width="144" height="18" rx="9" fill="#c98f1f"/>
+    <path d="M394 50v20" stroke="#f6f4ee" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- 调度耳麦 -->
+    <path d="M330 96a64 64 0 0 1 128 0" fill="none" stroke="#0e201c" stroke-width="8" stroke-linecap="round" opacity=".85"/>
+    <rect x="316" y="92" width="26" height="40" rx="12" fill="#0e201c" opacity=".85"/>
+    <path d="M330 132c-2 26 14 44 40 48" fill="none" stroke="#0e201c" stroke-width="6" stroke-linecap="round" opacity=".85"/>
+    <circle cx="374" cy="182" r="9" fill="#e85734"/>
+
+    <!-- 前鳍：一块指着看板，一块叉着腰 -->
+    <path d="M300 232c26 20 60 24 88 12-8 22-38 32-62 26-16-4-26-20-26-38z" fill="#0a958a"/>
+    <path d="M452 214c22-8 40-26 46-48 8 24-4 50-26 62-8 4-16 2-20-14z" fill="#0a958a" opacity=".9"/>
+  </g>
+</svg>
