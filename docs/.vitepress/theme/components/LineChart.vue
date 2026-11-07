@@ -33,15 +33,23 @@ const H = computed(() => props.height)
 const plotW = W - padL - padR
 const plotH = () => H.value - padT - padB
 
+// Markdown 里若把 :yMin="0" 写成 yMin="0"，静态属性进 props 就是字符串，
+// 会让 fmt() 的 v.toFixed 抛错、整页 SSR 失败，所以这里统一归一化成数字。
+const num = (v: unknown) => {
+  if (v === null || v === undefined || v === '') return undefined
+  const n = Number(v)
+  return Number.isFinite(n) ? n : undefined
+}
+
 const bounds = computed(() => {
   const all = props.series.flatMap((s) => s.points)
   const xs = all.map((p) => p[0])
   const ys = all.map((p) => p[1])
   return {
-    x0: props.xMin ?? Math.min(...xs),
-    x1: props.xMax ?? Math.max(...xs),
-    y0: props.yMin ?? Math.min(0, ...ys),
-    y1: props.yMax ?? Math.max(...ys) * 1.08
+    x0: num(props.xMin) ?? Math.min(...xs),
+    x1: num(props.xMax) ?? Math.max(...xs),
+    y0: num(props.yMin) ?? Math.min(0, ...ys),
+    y1: num(props.yMax) ?? Math.max(...ys) * 1.08
   }
 })
 
@@ -60,7 +68,7 @@ const yTicks = computed(() => {
     if (span < 200) return v.toFixed(v >= 100 ? 0 : 1)
     return v.toFixed(0)
   }
-  if (props.yTicks?.length) return props.yTicks
+  if (Array.isArray(props.yTicks) && props.yTicks.length) return props.yTicks
   const b = bounds.value
   const n = 4
   return Array.from({ length: n + 1 }, (_, i) => {

@@ -51,7 +51,7 @@ description: 排产 Agent 与商业 APS、MES、LLM 聊天机器人的边界，�
   eyebrow="实测 · 2026"
   title="同一个 40 题整数规划题集，谁在真正干活"
   lead="40 个 Mittelmann LP 实例。数据来自 LLM4MIP 项目公开报告（上海财经大学 + Stanford + 杉数 COPT），只取报告里明确给出的三个终点数字，不插值。"
-  max="40"
+  :max="40"
   :series="[
     { tone: 'coral', label: '解出的题数（满分 40）' },
     { tone: 'teal', label: '相对耗时（越短越好，见右侧标注）' }

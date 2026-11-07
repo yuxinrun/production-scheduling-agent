@@ -150,8 +150,8 @@ def append_plan(o0, jobs, newi):
     { v: 5, label: 'W=10' },
     { v: 6, label: 'W=12' }
   ]"
-  yMin="85"
-  yMax="150"
+  :yMin="85"
+  :yMax="150"
   xLabel="钉住格数 W（每档 6,000 次评估）"
   yLabel="时刻改动 / （makespan - 100）"
   :marks="[
@@ -221,8 +221,8 @@ def append_plan(o0, jobs, newi):
     { x0: 2.5, x1: 3.5, tone: 'coral', label: 'W=6 掉出可用线' },
     { x0: 5.5, x1: 6.5, tone: 'coral', label: 'W=12 也掉线' }
   ]"
-  yMin="0.42"
-  yMax="1.0"
+  :yMin="0.42"
+  :yMax="1.0"
   xLabel="钉住格数 W"
   yLabel="期望采纳质量 / 质量分"
   note="蓝线（质量分）跨档只摆 8.3%，橙线（敏感型期望采纳质量）摆 28.1%——曲线起伏几乎全来自对改动量的惩罚，不是质量。这就是第五节那个反直觉结论的种子。"
