@@ -14,7 +14,7 @@ hero:
       text: 先搞清「排产」到底指什么
       link: /what-is
     - theme: alt
-      text: 实战案例：LISA（黎阳）
+      text: 实战案例：LISA（某某）
       link: /case/background
 features:
   - title: 问题本身是强 NP-hard
@@ -259,7 +259,7 @@ def schedule(ops, day_minutes=960, workdays=6):
     { label: '实战案例 LISA', sub: '/case/*', cells: [ { s: 'soft', t: '看数字' }, { s: 'ok', t: '对照实现' }, { s: 'hard', t: '当模板抄' } ] },
     { label: '工程落地', sub: '/build/*', cells: [ { s: 'na', t: '—' }, { s: 'hard', t: '必读' }, { s: 'ok', t: '必读' } ] }
   ]"
-  note="所有数字都标了出处：运筹学结论给论文/教材，案例数字给黎阳项目的调研与需求文档，行业数字给公开报道并注明「未能核实」的那部分照写不误 —— 口径不一致本身就是排产项目的头号坑。"
+  note="所有数字都标了出处：运筹学结论给论文/教材，案例数字给某某项目的调研与需求文档，行业数字给公开报道并注明「未能核实」的那部分照写不误 —— 口径不一致本身就是排产项目的头号坑。"
 />
 
 <div class="psa-home-sec">

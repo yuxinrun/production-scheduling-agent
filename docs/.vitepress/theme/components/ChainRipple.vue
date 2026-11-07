@@ -154,7 +154,7 @@ const worst = computed(() => Math.max(1, ...ripple.value.map((r) => r.slip)))
     <p v-if="note" class="psa-note">{{ note }}</p>
     <p v-else class="psa-note">
       这是一个「一阶」涟漪模型：只沿工艺链正向传，不算并行设备抢产能、不看换型矩阵。
-      真实系统里这一步靠工艺路线 DAG + 设备能力拓扑做拓扑传播（黎阳项目用图谱引擎做，验收 KPI 是 ≤15 分钟出影响面）。
+      真实系统里这一步靠工艺路线 DAG + 设备能力拓扑做拓扑传播（某某项目用图谱引擎做，验收 KPI 是 ≤15 分钟出影响面）。
       把它当直觉训练器用：先看清「缓冲是唯一的堤坝」，再去啃真图。
     </p>
   </figure>

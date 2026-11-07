@@ -1,5 +1,7 @@
 node_modules/
 docs/.vitepress/dist/
+docs/.vitepress/dist2/
+.verify-dist/
 docs/.vitepress/cache/
 .DS_Store
 *.local
