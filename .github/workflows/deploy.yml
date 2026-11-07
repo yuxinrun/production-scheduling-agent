@@ -31,6 +31,9 @@ jobs:
           # 项目站点：https://yuxinrun.github.io/production-scheduling-agent/
           BASE: /production-scheduling-agent/
       - uses: actions/configure-pages@v5
+        with:
+          # Pages 未启用时自动启用（需要下面 permissions 里的 pages: write）
+          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: docs/.vitepress/dist
